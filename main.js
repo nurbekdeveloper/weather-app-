@@ -26,17 +26,13 @@ btn.addEventListener('click' , ()=>{
   fetch(url)
   .then(response => response.json())
   .then(data => {
-    manzil.innerHTML=data.name;
-    gradus.innerHTML=`${Math.round(data.main.temp)}°C`;
+    console.log(data);
+    manzil.innerHTML=`${data.name}   ${data.sys.country}`;
+    gradus.innerHTML=`${Math.round(data.main.temp)-273}°C`;
     type.innerHTML=data.weather[0].description;
 
   })
   .catch(error=>{
     console.error('Error fetching weather data:', error);
   })
-
-
-
-
-
  }
