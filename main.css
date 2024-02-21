@@ -57,7 +57,8 @@ body{
     }
     .location{
       margin-bottom: 20px ;
-      width: 100px ;
+      width: 200px ;
+      padding: 8px ;
     }
 
 }
